@@ -1,1 +1,1 @@
-# corporate-site-react-project
+# seogram-react-project
