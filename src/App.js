@@ -7,30 +7,29 @@ import Search from './components/Search.js';
 import Banner from './components/Banner.js';
 import LastNews from './components/LastNews.js';
 
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      
-      <div className="back-to-top"></div>
-
+    <>
       <Header />
 
-      <Services />
+      <div className="back-to-top"></div>
 
-      <About />
+      <Routes>
+        <Route path='/' element={<Banner />} />
+        <Route path='/home' element={<Banner />} />
+        <Route path='services' element={<Services />} />
+        <Route path='about' element={<About />} />
+        <Route path='blog' element={<About />} />
+        <Route path='team' element={<Team />} />
+        <Route path='search' element={<Search />} />
+        <Route path='services' element={<LastNews />} />
+      </Routes>
 
-      <Team />
-
-      <Search />
-
-      <Banner />
-
-      <LastNews />
-      
       <Footer />
-
-    </div>);
+    </>
+  );
 }
 
 export default App;
